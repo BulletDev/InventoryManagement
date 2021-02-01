@@ -30,7 +30,6 @@
         {
             this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
             this.btnSaveCustomer = new Telerik.WinControls.UI.RadButton();
-            this.txtCustomerId = new Telerik.WinControls.UI.RadLabel();
             this.txtEmailAddress = new Telerik.WinControls.UI.RadTextBox();
             this.txtContactNumber = new Telerik.WinControls.UI.RadTextBox();
             this.txtAddress = new Telerik.WinControls.UI.RadTextBox();
@@ -42,8 +41,8 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.txtCustomerId = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSaveCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmailAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).BeginInit();
@@ -55,31 +54,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSaveCustomer
             // 
-            this.btnSaveCustomer.Location = new System.Drawing.Point(192, 192);
+            this.btnSaveCustomer.Location = new System.Drawing.Point(195, 268);
             this.btnSaveCustomer.Name = "btnSaveCustomer";
-            this.btnSaveCustomer.Size = new System.Drawing.Size(95, 24);
+            this.btnSaveCustomer.Size = new System.Drawing.Size(95, 25);
             this.btnSaveCustomer.TabIndex = 25;
             this.btnSaveCustomer.Text = "Save";
             this.btnSaveCustomer.ThemeName = "VisualStudio2012Dark";
             this.btnSaveCustomer.Click += new System.EventHandler(this.btnSaveCustomer_Click);
             // 
-            // txtCustomerId
-            // 
-            this.txtCustomerId.Location = new System.Drawing.Point(122, 12);
-            this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Size = new System.Drawing.Size(13, 18);
-            this.txtCustomerId.TabIndex = 24;
-            this.txtCustomerId.Text = "#";
-            this.txtCustomerId.ThemeName = "VisualStudio2012Dark";
-            // 
             // txtEmailAddress
             // 
-            this.txtEmailAddress.Location = new System.Drawing.Point(122, 156);
+            this.txtEmailAddress.Location = new System.Drawing.Point(125, 222);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(165, 24);
             this.txtEmailAddress.TabIndex = 23;
@@ -87,7 +78,7 @@
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(122, 126);
+            this.txtContactNumber.Location = new System.Drawing.Point(125, 192);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(165, 24);
             this.txtContactNumber.TabIndex = 22;
@@ -95,15 +86,20 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(122, 96);
+            this.txtAddress.Location = new System.Drawing.Point(125, 101);
+            this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(165, 24);
+            // 
+            // 
+            // 
+            this.txtAddress.RootElement.StretchVertically = true;
+            this.txtAddress.Size = new System.Drawing.Size(165, 85);
             this.txtAddress.TabIndex = 21;
             this.txtAddress.ThemeName = "VisualStudio2012Dark";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(122, 66);
+            this.txtLastName.Location = new System.Drawing.Point(125, 71);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 24);
             this.txtLastName.TabIndex = 20;
@@ -111,7 +107,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(122, 36);
+            this.txtFirstName.Location = new System.Drawing.Point(125, 41);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 24);
             this.txtFirstName.TabIndex = 19;
@@ -119,7 +115,7 @@
             // 
             // radLabel6
             // 
-            this.radLabel6.Location = new System.Drawing.Point(12, 158);
+            this.radLabel6.Location = new System.Drawing.Point(10, 223);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(79, 18);
             this.radLabel6.TabIndex = 18;
@@ -128,7 +124,7 @@
             // 
             // radLabel5
             // 
-            this.radLabel5.Location = new System.Drawing.Point(12, 127);
+            this.radLabel5.Location = new System.Drawing.Point(10, 193);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(92, 18);
             this.radLabel5.TabIndex = 17;
@@ -137,7 +133,7 @@
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(12, 97);
+            this.radLabel4.Location = new System.Drawing.Point(10, 102);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(49, 18);
             this.radLabel4.TabIndex = 16;
@@ -146,7 +142,7 @@
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(12, 67);
+            this.radLabel3.Location = new System.Drawing.Point(10, 72);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(61, 18);
             this.radLabel3.TabIndex = 15;
@@ -155,7 +151,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(12, 37);
+            this.radLabel2.Location = new System.Drawing.Point(10, 42);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(63, 18);
             this.radLabel2.TabIndex = 14;
@@ -164,20 +160,30 @@
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(12, 12);
+            this.radLabel1.Location = new System.Drawing.Point(10, 12);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(71, 18);
             this.radLabel1.TabIndex = 13;
             this.radLabel1.Text = "Customer ID:";
             this.radLabel1.ThemeName = "VisualStudio2012Dark";
             // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Enabled = false;
+            this.txtCustomerId.Location = new System.Drawing.Point(125, 11);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(165, 24);
+            this.txtCustomerId.TabIndex = 26;
+            this.txtCustomerId.ThemeName = "VisualStudio2012Dark";
+            // 
             // CustomerAdd
             // 
+            this.AcceptButton = this.btnSaveCustomer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 227);
-            this.Controls.Add(this.btnSaveCustomer);
+            this.ClientSize = new System.Drawing.Size(302, 305);
             this.Controls.Add(this.txtCustomerId);
+            this.Controls.Add(this.btnSaveCustomer);
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.txtContactNumber);
             this.Controls.Add(this.txtAddress);
@@ -201,8 +207,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Customer";
             this.ThemeName = "VisualStudio2012Dark";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.btnSaveCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmailAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).EndInit();
@@ -214,6 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,7 +231,6 @@
 
         private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
         private Telerik.WinControls.UI.RadButton btnSaveCustomer;
-        private Telerik.WinControls.UI.RadLabel txtCustomerId;
         private Telerik.WinControls.UI.RadTextBox txtEmailAddress;
         private Telerik.WinControls.UI.RadTextBox txtContactNumber;
         private Telerik.WinControls.UI.RadTextBox txtAddress;
@@ -236,5 +242,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.RadTextBox txtCustomerId;
     }
 }

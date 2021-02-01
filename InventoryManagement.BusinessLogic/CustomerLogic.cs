@@ -10,7 +10,7 @@ namespace InventoryManagement.BusinessLogic
     public class CustomerLogic
     {
         ICustomerAccess _customerAccess = new CustomerAccess();
-        DataTable customerDataTable = new DataTable();
+        DataTable _customerDataTable = new DataTable();
 
         public void InsertCustomer(CustomerModel customer)
         {
@@ -28,26 +28,24 @@ namespace InventoryManagement.BusinessLogic
         {
             foreach (object obj in _customerAccess.GetCustomer())
             {
-                Type t = obj.GetType();
-                PropertyInfo[] pis = t.GetProperties();
-                
-                if (customerDataTable.Columns.Count == 0)
+                Type objectType = obj.GetType();
+                PropertyInfo[] objectProperty = objectType.GetProperties();
+                if (_customerDataTable.Columns.Count == 0)
                 {
-                    foreach (PropertyInfo pi in pis)
+                    foreach (PropertyInfo property in objectProperty)
                     {
-                        customerDataTable.Columns.Add(pi.Name, pi.PropertyType);
+                        _customerDataTable.Columns.Add(property.Name, property.PropertyType);
                     }
                 }
-
-                DataRow dr = customerDataTable.NewRow();
-                foreach (PropertyInfo pi in pis)
+                DataRow row = _customerDataTable.NewRow();
+                foreach (PropertyInfo property in objectProperty)
                 {
-                    object value = pi.GetValue(obj, null);
-                    dr[pi.Name] = value;
+                    object value = property.GetValue(obj, null);
+                    row[property.Name] = value;
                 }
-                customerDataTable.Rows.Add(dr);
+                _customerDataTable.Rows.Add(row);
             }
-            return customerDataTable;
+            return _customerDataTable;
         }
 
         public void UpdateCustomer(CustomerModel customer)

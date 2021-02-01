@@ -8,12 +8,12 @@ namespace InventoryManagement.Pages.Customer
     public partial class CustomerAdd : Telerik.WinControls.UI.RadForm
     {
         public delegate void DoEvent();
-        public event DoEvent RefreshDgv;
-        CustomerLogic customer = new CustomerLogic();
+        public event DoEvent _refreshDataGridView;
+        CustomerLogic _customer = new CustomerLogic();
         public CustomerAdd()
         {
             InitializeComponent();
-            txtCustomerId.Text = customer.GenerateCustomerId();
+            txtCustomerId.Text = _customer.GenerateCustomerId();
         }
 
         private void btnSaveCustomer_Click(object sender, EventArgs e)
@@ -22,8 +22,7 @@ namespace InventoryManagement.Pages.Customer
             {
                 try
                 {
-                    CustomerLogic cl = new CustomerLogic();
-                    CustomerModel cm = new CustomerModel {
+                    CustomerModel customer = new CustomerModel {
                         CustomerId = txtCustomerId.Text,
                         FirstName = txtFirstName.Text,
                         LastName = txtLastName.Text,
@@ -33,11 +32,11 @@ namespace InventoryManagement.Pages.Customer
                         CreatedAt = DateTime.Now,
                         CreatedBy = Globals.GetCurrentUser()
                     };
-                    customer.InsertCustomer(cm);
+                    _customer.InsertCustomer(customer);
                     DialogResult dr = MessageBox.Show("Customer successfully added", "", MessageBoxButtons.OK);
                     if (dr == DialogResult.OK)
                     {
-                        this.RefreshDgv();
+                        this._refreshDataGridView();
                         this.Close();
                     }
                 }
@@ -66,6 +65,5 @@ namespace InventoryManagement.Pages.Customer
             }
             return false;
         }
-
     }
 }

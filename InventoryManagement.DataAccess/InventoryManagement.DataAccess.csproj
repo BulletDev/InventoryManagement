@@ -48,8 +48,13 @@
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="CustomerAccess.cs" />
-    <Compile Include="ICustomerAccess.cs" />
+    <Compile Include="Interfaces\ICustomerAccess.cs" />
+    <Compile Include="Interfaces\IProductAccess.cs" />
+    <Compile Include="Interfaces\ISupplierAccess.cs" />
+    <Compile Include="ProductAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderAccess.cs" />
+    <Compile Include="SupplierAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InventoryManagement.Models\InventoryManagement.Models.csproj">

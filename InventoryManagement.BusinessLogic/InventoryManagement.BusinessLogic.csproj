@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerLogic.cs" />
+    <Compile Include="ProductLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderLogic.cs" />
+    <Compile Include="SupplierLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InventoryManagement.DataAccess\InventoryManagement.DataAccess.csproj">

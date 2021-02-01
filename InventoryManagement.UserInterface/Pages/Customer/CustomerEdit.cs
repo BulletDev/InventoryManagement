@@ -13,6 +13,8 @@ namespace InventoryManagement.Pages.Customer
 {
     public partial class CustomerEdit : Telerik.WinControls.UI.RadForm
     {
+        public delegate void DoEvent();
+        public event DoEvent _refreshDataGridView;
         CustomerLogic _customerLogic = new CustomerLogic();
         public int Id{ get; set; }
         public CustomerEdit(int id)
@@ -49,7 +51,12 @@ namespace InventoryManagement.Pages.Customer
                     UpdatedBy = Globals.GetCurrentUser()
                 };
                 _customerLogic.UpdateCustomer(customer);
-                MessageBox.Show("Customer information successfully updated");
+                DialogResult dr = MessageBox.Show("Customer information successfully updated", "", MessageBoxButtons.OK);
+                if (dr == DialogResult.OK)
+                {
+                    this._refreshDataGridView();
+                    this.Close();
+                }
             }
         }
 

@@ -60,7 +60,7 @@
             // 
             // btnSaveCustomer
             // 
-            this.btnSaveCustomer.Location = new System.Drawing.Point(192, 192);
+            this.btnSaveCustomer.Location = new System.Drawing.Point(195, 251);
             this.btnSaveCustomer.Name = "btnSaveCustomer";
             this.btnSaveCustomer.Size = new System.Drawing.Size(95, 24);
             this.btnSaveCustomer.TabIndex = 38;
@@ -70,7 +70,7 @@
             // 
             // txtCustomerId
             // 
-            this.txtCustomerId.Location = new System.Drawing.Point(122, 12);
+            this.txtCustomerId.Location = new System.Drawing.Point(125, 12);
             this.txtCustomerId.Name = "txtCustomerId";
             this.txtCustomerId.Size = new System.Drawing.Size(13, 18);
             this.txtCustomerId.TabIndex = 37;
@@ -79,7 +79,7 @@
             // 
             // txtEmailAddress
             // 
-            this.txtEmailAddress.Location = new System.Drawing.Point(122, 156);
+            this.txtEmailAddress.Location = new System.Drawing.Point(125, 217);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(165, 24);
             this.txtEmailAddress.TabIndex = 36;
@@ -87,7 +87,7 @@
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(122, 126);
+            this.txtContactNumber.Location = new System.Drawing.Point(125, 187);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(165, 24);
             this.txtContactNumber.TabIndex = 35;
@@ -95,15 +95,20 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(122, 96);
+            this.txtAddress.Location = new System.Drawing.Point(125, 96);
+            this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(165, 24);
+            // 
+            // 
+            // 
+            this.txtAddress.RootElement.StretchVertically = true;
+            this.txtAddress.Size = new System.Drawing.Size(165, 85);
             this.txtAddress.TabIndex = 34;
             this.txtAddress.ThemeName = "VisualStudio2012Dark";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(122, 66);
+            this.txtLastName.Location = new System.Drawing.Point(125, 66);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 24);
             this.txtLastName.TabIndex = 33;
@@ -111,7 +116,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(122, 36);
+            this.txtFirstName.Location = new System.Drawing.Point(125, 36);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 24);
             this.txtFirstName.TabIndex = 32;
@@ -119,7 +124,7 @@
             // 
             // radLabel6
             // 
-            this.radLabel6.Location = new System.Drawing.Point(12, 158);
+            this.radLabel6.Location = new System.Drawing.Point(10, 219);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(79, 18);
             this.radLabel6.TabIndex = 31;
@@ -128,7 +133,7 @@
             // 
             // radLabel5
             // 
-            this.radLabel5.Location = new System.Drawing.Point(12, 127);
+            this.radLabel5.Location = new System.Drawing.Point(10, 188);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(92, 18);
             this.radLabel5.TabIndex = 30;
@@ -137,7 +142,7 @@
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(12, 97);
+            this.radLabel4.Location = new System.Drawing.Point(10, 97);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(49, 18);
             this.radLabel4.TabIndex = 29;
@@ -146,7 +151,7 @@
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(12, 67);
+            this.radLabel3.Location = new System.Drawing.Point(10, 67);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(61, 18);
             this.radLabel3.TabIndex = 28;
@@ -155,7 +160,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(12, 37);
+            this.radLabel2.Location = new System.Drawing.Point(10, 37);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(63, 18);
             this.radLabel2.TabIndex = 27;
@@ -164,7 +169,7 @@
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(12, 12);
+            this.radLabel1.Location = new System.Drawing.Point(10, 12);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(71, 18);
             this.radLabel1.TabIndex = 26;
@@ -173,9 +178,10 @@
             // 
             // CustomerEdit
             // 
+            this.AcceptButton = this.btnSaveCustomer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 227);
+            this.ClientSize = new System.Drawing.Size(302, 287);
             this.Controls.Add(this.btnSaveCustomer);
             this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.txtEmailAddress);
@@ -198,6 +204,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit Customer";
             this.ThemeName = "VisualStudio2012Dark";
             this.Load += new System.EventHandler(this.CustomerEdit_Load);

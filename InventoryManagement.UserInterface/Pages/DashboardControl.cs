@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InventoryManagement
+namespace InventoryManagement.Pages
 {
-    public partial class ProductsControl : UserControl
+    public partial class DashboardControl : UserControl
     {
-        public ProductsControl()
+        public DashboardControl()
         {
             InitializeComponent();
         }
